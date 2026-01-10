@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nokreciana Arx Sideralis – Tenant Application</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+@media print {
+  body { margin: 0; }
+  .no-print { display: none !important; }
+  iframe { border: none; }
+}
+
+.pdf-page {
+  position: relative;
+  width: 794px;
+  height: 1123px;
+  margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 : TERMS (PRINTS AS-IS) -->
+<section>
+<iframe src="terms.pdf" width="794" height="1123"></iframe>
+</section>
+
+<!-- PAGE 2 : TAF (PRINTS AS-IS + OVERLAY) -->
+<section class="pdf-page">
+
+<iframe src="taf.pdf" class="absolute inset-0 w-full h-full"></iframe>
+
+<!-- OVERLAYS -->
+<input class="overlay" style="top:142px; left:210px; width:420px;">
+<input class="overlay" style="top:178px; left:210px; width:420px;">
+<input type="date" class="overlay" style="top:214px; left:210px; width:180px;">
+
+<input class="overlay" style="top:250px; left:210px; width:180px;">
+<input class="overlay" style="top:250px; left:430px; width:180px;">
+
+<input class="overlay" style="top:286px; left:210px; width:420px;">
+<input class="overlay" style="top:322px; left:210px; width:420px;">
+
+<input class="overlay" style="top:358px; left:210px; width:160px;">
+<input class="overlay" style="top:358px; left:390px; width:120px;">
+<input class="overlay" style="top:358px; left:530px; width:100px;">
+
+<input class="overlay" style="top:394px; left:210px; width:200px;">
+<input class="overlay" style="top:394px; left:430px; width:200px;">
+
+<input class="overlay" style="top:430px; left:210px; width:420px;">
+<input class="overlay" style="top:466px; left:210px; width:420px;">
+
+<!-- GUARDIAN -->
+<input class="overlay" style="top:540px; left:210px; width:420px;">
+<input class="overlay" style="top:576px; left:210px; width:420px;">
+<input class="overlay" style="top:612px; left:210px; width:420px;">
+<input class="overlay" style="top:648px; left:210px; width:420px;">
+<input class="overlay" style="top:684px; left:210px; width:420px;">
+
+<input class="overlay" style="top:720px; left:210px; width:160px;">
+<input class="overlay" style="top:720px; left:390px; width:120px;">
+<input class="overlay" style="top:720px; left:530px; width:100px;">
+
+</section>
+
+<!-- SIGNATURES (PRINT CONTINUES PAGE 2) -->
+<section style="width:794px;margin:auto;padding:20px;">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+  <div style="border:1px solid #000;height:90px;">Tenant Signature</div>
+  <div style="border:1px solid #000;height:90px;">Guardian Signature</div>
+  <div style="border:1px solid #000;height:90px;">Manager Signature</div>
+</div>
+
+<div style="border:1px solid #000;width:120px;height:90px;margin-top:20px;">
+Passport Photo
+</div>
+</section>
+
+<button class="no-print" onclick="window.print()">Print</button>
+
+</body>
+</html>
